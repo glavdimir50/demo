@@ -3,7 +3,9 @@
   <div class="banner">
     <div class="container">
       <h1 class="logo-font" [title]="title">{{ title }}</h1>
-      <p [innerHTML]="subtitle"></p>
+      <p [innerHTML]="subTitle" [attr.data-id]="subTitle"></p>
+      <!-- 屬性: property, attribute: property沒有定義的 -->
+      <!-- p.innerHTML = subTitle; -->
     </div>
   </div>
 

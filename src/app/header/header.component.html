@@ -13,9 +13,15 @@
       placeholder="Keyword"
       [(ngModel)]="keyword"
     />
+    <!-- a-ngModel -->
     <button class="btn btn-sm btn-primary" (click)="search($event)">
       <i class="ion-search"></i>
     </button>
-    {{ keyword }}
+    <span *ngIf="keyword === ''; else search1" class="highlight"
+      >請輸入查詢條件
+    </span>
+    <ng-template #search1
+      ><span>你輸入的文字是:{{ keyword }}</span></ng-template
+    >
   </div>
 </nav>

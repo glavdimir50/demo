@@ -11,7 +11,13 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  highlightTitle = false;
+  fontSize = 24;
   search($event) {
     console.log($event);
+
+    this.highlightTitle = !this.highlightTitle;
+    this.fontSize++;
   }
 }
